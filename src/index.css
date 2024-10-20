@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #0f0a1e;
+  --secondary-bg: #1a1228;
+  --accent-color: #6d28d9;
+  --text-color: #e2e8f0;
+  --glass-bg: rgba(26, 18, 40, 0.6);
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+}
+
+.glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.glow-effect {
+  transition: all 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5b21b6;
+}
+
+/* Additional styles for enhanced dark glass theme */
+.dark-glass-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+}
+
+.dark-glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-glass-button {
+  background: var(--accent-color);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.dark-glass-button:hover {
+  background: #5b21b6;
+  box-shadow: 0 0 10px var(--accent-color);
+}
